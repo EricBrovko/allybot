@@ -1,2 +1,1 @@
-# allybot
-allybot.io
+# AllyBot - admin panel FE app

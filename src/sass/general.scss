@@ -1,0 +1,122 @@
+html {
+  position: relative;
+  min-width: 320px;
+}
+
+html, body {
+  min-height: 100%;
+  min-width: $resMin;
+}
+
+
+.general-page {
+  .header {
+    padding: 20px;
+    button {
+      font-size: 12px;
+    }
+  }
+
+  .product-header {
+    background-color: #F9FAFE;
+    min-height: 850px;
+    width: 100%;
+    background: url("./shared/styles/images/main-product.png") center center no-repeat;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    &__ads {
+      margin-top: 50px;
+      button {
+        margin-top: 65px;
+      }
+    }
+  }
+
+  .product-footer {
+    min-height: 850px;
+    width: 100%;
+    background-color: #F9FAFE;
+    background: url("./shared/styles/images/product-footer.jpg") center center no-repeat;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    &__wrapper {
+      h3:first-child {
+        padding-top: 60px;
+      }
+      button {
+        margin-top: 65px;
+      }
+    }
+  }
+
+  .section-features {
+    background-color: #F9FAFE;
+    h3:nth-child(2) {
+      margin-bottom: 50px;
+    }
+    &__col {
+      img {
+        width: 35%;
+        height: 135px;
+      }
+      p {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .section-about {
+    width: 100%;
+    background-color: #F9FAFE;
+    min-height: 850px;
+    background: url("./shared/styles/images/about.png") center center no-repeat;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    h3, h4 {
+      padding-left: 185px;
+    }
+  }
+
+  .section-price {
+    background-color: #F9FAFE;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 30px;
+    h3 {
+      margin-top: 0;
+    }
+  }
+
+  .setion-integration {
+    background-color: #F9FAFE;
+    padding-top: 30px;
+    &__col {
+      img {
+        width: 30%;
+      }
+      p {
+        margin-top: 15px;
+      }
+    }
+  }
+}
+.row-block {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.next-row {
+  margin-top: 50px;
+}
+
+.next-line-ads {
+  margin-top: 5px;
+}
+// injector
+// endinjector

@@ -9,7 +9,15 @@
     .run(themeRun);
 
   /** @ngInject */
-  function themeRun($timeout, $rootScope, layoutPaths, preloader, $q, baSidebarService, themeLayoutSettings) {
+  function themeRun($timeout, $rootScope, layoutPaths, preloader, $q, baSidebarService, themeLayoutSettings, $state) {
+    // $rootScope.$on('$stateChangeStart', function(event, next) {
+    //   $rootScope.isGeneralPage = $state.current.name === 'general';
+    // });
+
+    $rootScope.$watch(function () {
+      $rootScope.isGeneralPage = $state.current.name === 'general';
+    });
+
     var whatToWait = [
       preloader.loadAmCharts(),
       $timeout(3000)

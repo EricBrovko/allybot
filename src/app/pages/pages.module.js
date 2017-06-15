@@ -1,7 +1,3 @@
-/**
- * @author v.lugovsky
- * created on 16.12.2015
- */
 (function () {
   'use strict';
 
@@ -10,9 +6,11 @@
 
     'BlurAdmin.pages.dashboard',
     'BlurAdmin.pages.charts',
-    'BlurAdmin.pages.profile'
+    'BlurAdmin.pages.profile',
+    'BlurAdmin.pages.general'
   ])
-      .config(routeConfig);
+      .config(routeConfig)
+      // .controller('')
 
   /** @ngInject */
   function routeConfig($urlRouterProvider, baSidebarServiceProvider) {

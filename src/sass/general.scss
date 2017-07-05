@@ -10,11 +10,129 @@ html, body {
 
 
 .general-page {
-  .header {
-    padding: 20px;
-    button {
-      font-size: 12px;
+  .header-wrapper {
+    background-color: #F9FAFE;
+    color: #fff;
+    min-height: 850px;
+    width: 100%;
+    $wowlyBgUrl: $images-root + 'wowly/wowly-bg-header.png';
+    background: url($wowlyBgUrl) center center no-repeat;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+
+    &__logo {
+      font-size: 40px;
+      float: left;
+      line-height: 60px;
     }
+    &__menu {
+      float: right;
+      line-height: 60px;
+      margin: 0;
+      padding: 0;
+      li {
+        display: inline;
+      }
+    }
+
+    &__inner {
+      .row {
+        min-height: 350px;
+        .inner-block {
+          display: table;
+          height: 520px;
+          position: relative;
+          overflow: hidden;
+          &__content {
+            width: 100%;
+            position: absolute;
+            top: 40%;
+            display: table-cell;
+            vertical-align: middle;
+            div {
+              position: relative;
+              top: -50%;
+              span {
+                display: block;
+              }
+              span:first-child {
+                font-size: 40px;
+                line-height: 50px;
+                margin-bottom: 20px;
+              }
+              span:nth-child(2) {
+                font-size: 40px;
+                line-height: 50px;
+                margin-bottom: 50px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .main-wrapper {
+    background-color: #fff;
+    &__summary {
+      span {
+        display: block;
+        font-size: 35px;
+        line-height: 40px;
+      }
+      span:first-child {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 45px;
+        color: #00FF00;
+      }
+    }
+
+    &__description {
+      span {
+        display: block;
+        color: #4169E1;
+        margin-top: 100px;
+        margin-bottom: 50px;
+        font-size: 45px;
+      }
+    }
+    
+    &__description-list {
+      color: #696969;
+      p {
+        font-size: 25px;
+        line-height: 30px;
+        .icon-pin {
+          width: 25px;
+        }
+      }
+      p > span {
+        display: block;
+        margin: 25px 0 25px 0;
+      }
+      p > span.add-wowly {
+        color: #e5e500;
+      }
+      p > span.save-moments {
+        color: #449d44;
+      }
+      p > span.see-board {
+        color: #4169E1;
+      }
+    }
+
+  }
+
+
+
+
+
+
+
+  .header {
   }
 
   .product-header {

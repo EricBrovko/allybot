@@ -45,6 +45,6 @@
       ]
     });
 
-    $urlRouterProvider.otherwise('/dashboard');
+    $urlRouterProvider.otherwise('/general');
   }
 })();

@@ -10,11 +10,11 @@ html, body {
 
 
 .general-page {
+  background-color: #fff;
   .header-wrapper {
-    background-color: #F9FAFE;
-    color: #fff;
-    min-height: 850px;
     width: 100%;
+    min-height: 850px;
+    color: #fff;
     $wowlyBgUrl: $images-root + 'wowly/wowly-bg-header.png';
     background: url($wowlyBgUrl) center center no-repeat;
     -webkit-background-size: 100% 100%;
@@ -34,10 +34,13 @@ html, body {
       padding: 0;
       li {
         display: inline;
+        a {
+          margin-left: 5px;
+        }
       }
     }
-
     &__inner {
+      padding-top: 140px;
       .row {
         min-height: 350px;
         .inner-block {
@@ -46,27 +49,28 @@ html, body {
           position: relative;
           overflow: hidden;
           &__content {
-            width: 100%;
-            position: absolute;
-            top: 40%;
-            display: table-cell;
-            vertical-align: middle;
-            div {
-              position: relative;
-              top: -50%;
-              span {
-                display: block;
-              }
-              span:first-child {
-                font-size: 40px;
-                line-height: 50px;
-                margin-bottom: 20px;
-              }
-              span:nth-child(2) {
-                font-size: 40px;
-                line-height: 50px;
-                margin-bottom: 50px;
-              }
+            span {
+              display: block;
+            }
+            span:first-child {
+              font-size: 40px;
+              line-height: 50px;
+              margin-bottom: 20px;
+            }
+            span:nth-child(2) {
+              font-size: 40px;
+              line-height: 50px;
+              margin-bottom: 50px;
+            }
+            button {
+              color: #fff;
+              background-color: #5cb85c;
+              border-color: #4cae4c;
+            }
+            button:hover {
+              color: #fff;
+              background-color: #449d44;
+              border-color: #398439;
             }
           }
         }
@@ -75,166 +79,132 @@ html, body {
   }
 
   .main-wrapper {
-    background-color: #fff;
-    &__summary {
-      span {
-        display: block;
-        font-size: 35px;
-        line-height: 40px;
-      }
-      span:first-child {
-        margin-top: 50px;
-        margin-bottom: 50px;
-        font-size: 45px;
-        color: #00FF00;
-      }
-    }
+    &__inception {
+      margin-bottom: 75px;
 
-    &__description {
-      span {
-        display: block;
-        color: #4169E1;
-        margin-top: 100px;
-        margin-bottom: 50px;
-        font-size: 45px;
+      .inception-title {
+        margin-top: 10%;
       }
-    }
-    
-    &__description-list {
-      color: #696969;
-      p {
-        font-size: 25px;
-        line-height: 30px;
-        .icon-pin {
-          width: 25px;
+      .summary-block {
+        span {
+          display: block;
+          font-size: 35px;
+          line-height: 40px;
+        }
+        span:first-child {
+          margin-top: 50px;
+          margin-bottom: 50px;
+          font-size: 45px;
+          color: #00FF00;
         }
       }
-      p > span {
+      .description-block {
+        span {
+          display: block;
+          color: #4169E1;
+          margin-top: 100px;
+          margin-bottom: 50px;
+          font-size: 45px;
+        }
+      }
+      .description-block-list {
+        color: #696969;
+        p {
+          font-size: 25px;
+          line-height: 30px;
+          .icon-pin {
+            width: 25px;
+          }
+        }
+        p > span {
+          display: block;
+          margin: 25px 0 25px 0;
+        }
+        p > span.add-wowly {
+          color: #e5e500;
+        }
+        p > span.save-moments {
+          color: #449d44;
+        }
+        p > span.see-board {
+          color: #4169E1;
+        }
+      }
+    }
+
+    &__eduction {
+      width: 100%;
+      min-height: 600px;
+      color: #fff;
+      $wowlyBgUrl: $images-root + 'wowly/wowly-bg-footer.png';
+      background: url($wowlyBgUrl) center center no-repeat;
+      -webkit-background-size: 100% 100%;
+      -moz-background-size: 100% 100%;
+      -o-background-size: 100% 100%;
+      background-size: 100% 100%;
+
+      .eduction-icon {
+        margin-top: 10%;
+        img {
+          padding-left: 30px;        
+        }
+      }
+      .eduction-title {
+        span {
+          display: block;
+          font-size: 35px;
+          line-height: 40px;
+        }
+        span:first-child {
+          margin-top: 50px;
+          margin-bottom: 50px;
+          font-size: 45px;
+        }
+      }
+    }
+  }
+
+  .footer-wrapper {
+    width: 100%;
+    min-height: 100px;
+    padding: 50px 0;
+
+    &__logo {
+      span {
         display: block;
-        margin: 25px 0 25px 0;
       }
-      p > span.add-wowly {
-        color: #e5e500;
+      span:first-child {
+        float: left;
+        margin-right: 10px;
+        font-size: 45px;
+        line-height: 40px;
       }
-      p > span.save-moments {
-        color: #449d44;
-      }
-      p > span.see-board {
-        color: #4169E1;
-      }
-    }
-
-  }
-
-
-
-
-
-
-
-  .header {
-  }
-
-  .product-header {
-    background-color: #F9FAFE;
-    min-height: 850px;
-    width: 100%;
-    background: url("./shared/styles/images/main-product.png") center center no-repeat;
-    -webkit-background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    background-size: 100% 100%;
-    &__ads {
-      margin-top: 50px;
-      button {
-        margin-top: 65px;
+      .rights {
+        float: left;
+        line-height: 20px;
+        font-size: 12px;
       }
     }
-  }
-
-  .product-footer {
-    min-height: 850px;
-    width: 100%;
-    background-color: #F9FAFE;
-    background: url("./shared/styles/images/product-footer.jpg") center center no-repeat;
-    background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    background-size: 100% 100%;
-    &__wrapper {
-      h3:first-child {
-        padding-top: 60px;
-      }
-      button {
-        margin-top: 65px;
-      }
-    }
-  }
-
-  .section-features {
-    background-color: #F9FAFE;
-    h3:nth-child(2) {
-      margin-bottom: 50px;
-    }
-    &__col {
-      img {
-        width: 35%;
-        height: 135px;
-      }
-      p {
-        margin-top: 10px;
-      }
-    }
-  }
-
-  .section-about {
-    width: 100%;
-    background-color: #F9FAFE;
-    min-height: 850px;
-    background: url("./shared/styles/images/about.png") center center no-repeat;
-    -webkit-background-size: 100% 100%;
-    -moz-background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    background-size: 100% 100%;
-    h3, h4 {
-      padding-left: 185px;
-    }
-  }
-
-  .section-price {
-    background-color: #F9FAFE;
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 30px;
-    h3 {
-      margin-top: 0;
-    }
-  }
-
-  .setion-integration {
-    background-color: #F9FAFE;
-    padding-top: 30px;
-    &__col {
-      img {
-        width: 30%;
-      }
-      p {
-        margin-top: 15px;
+    &__social {
+      font-size: 0;  
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font: inherit;
+      vertical-align: baseline;
+      line-height: 30px;
+      li {
+        display: inline-block;
+        padding: 5px 40px 0 0;
+        a {
+          color: #666666;
+          font-size: 24px;
+        }
       }
     }
   }
 }
-.row-block {
-  margin-left: 0;
-  margin-right: 0;
-}
 
-.next-row {
-  margin-top: 50px;
-}
-
-.next-line-ads {
-  margin-top: 5px;
-}
 // injector
 // endinjector

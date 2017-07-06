@@ -76,6 +76,13 @@ html, body {
         }
       }
     }
+
+    @media only screen and (max-width: 400px) {
+      &__logo, &__menu {
+        width: 100%;
+        text-align: center;
+      }
+    }
   }
 
   .main-wrapper {

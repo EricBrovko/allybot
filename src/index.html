@@ -27,20 +27,20 @@
 <body>
   <div class="body-bg"></div>
 
-  <main ng-if="$pageFinishedLoading"
+  <main ng-if="$pageFinishedLoading && isAdminPage"
         ng-class="{ 'menu-collapsed': $baSidebarService.isMenuCollapsed() }">
 
-    <ba-sidebar ng-if="!isGeneralPage"></ba-sidebar>
-    <page-top ng-if="!isGeneralPage"></page-top>
+    <ba-sidebar></ba-sidebar>
+    <page-top></page-top>
 
-    <div class="al-main" ng-if="!isGeneralPage">
+    <div class="al-main">
       <div class="al-content">
         <content-top></content-top>
         <div ui-view autoscroll="true" autoscroll-body-top></div>
       </div>
     </div>
 
-    <footer class="al-footer clearfix" ng-if="!isGeneralPage">
+    <footer class="al-footer clearfix">
       <div class="al-footer-right">Created with <i class="ion-heart"></i></div>
       <div class="al-footer-main clearfix">
         <div class="al-copy">Blur Admin 2016</div>
@@ -53,16 +53,13 @@
       </div>
     </footer>
 
-    <!-- <div class="general-page" ng-if="isGeneralPage">
-      <div ui-view></div>
-    </div> -->
-
     <back-top></back-top>
   </main>
 
 
-  <div class="general-page" ng-if="isGeneralPage">
+  <div class="general-page" ng-if="$pageFinishedLoading && !isAdminPage">
     <div ui-view></div>
+    <back-top></back-top>
   </div>
 
   <div id="preloader" ng-show="!$pageFinishedLoading">

@@ -7,10 +7,11 @@
     'BlurAdmin.pages.dashboard',
     'BlurAdmin.pages.charts',
     'BlurAdmin.pages.profile',
-    'BlurAdmin.pages.general'
+
+    'BlurAdmin.pages.general',
+    'BlurAdmin.pages.login'
   ])
       .config(routeConfig)
-      // .controller('')
 
   /** @ngInject */
   function routeConfig($urlRouterProvider, baSidebarServiceProvider) {

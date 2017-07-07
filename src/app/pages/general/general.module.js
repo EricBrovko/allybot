@@ -12,6 +12,7 @@
         .state('general', {
           url: '/general',
           templateUrl : 'app/pages/general/main.html',
+          controller: 'GeneralPageCtrl',
         });
   }
 

@@ -5,11 +5,21 @@
     .controller('LoginPageCtrl', LoginPageCtrl);
 
   /** @ngInject */
-  function LoginPageCtrl($scope) {
+  function LoginPageCtrl($scope, $http, UserService, toastr) {
+    console.log('login');
+
+    console.log(UserService.GetAll());
+
+    $scope.showSuccessMsg = function() {
+      toastr.success('Your information has been saved successfully!');
+    };
 
 
-    // console.log('login');
+    $scope.showSuccessMsg1 = function() {
+    	console.log(toastr);
 
+      toastr.warning('Your information has been saved successfully!');
+    };
 
   }
 

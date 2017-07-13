@@ -11,26 +11,17 @@
   /** @ngInject */
   function themeRun($timeout, $rootScope, layoutPaths, preloader, $q, baSidebarService, themeLayoutSettings, $state) {
     var notAdminPages = ['general', 'login'];
-    $rootScope.$state = $state
-      console.log('$initial', $state);
-
-
-    $rootScope.$watch('$state.current.name', function (newValue, oldValue) {
-      $rootScope.isAdminPage = notAdminPages.indexOf($state.current.name) === -1;
-    });
+    $rootScope.isAdminPage = $state.current.name;
 
     $rootScope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
-      $rootScope.isAdminPage = notAdminPages.indexOf($state.current.name) === -1;
-      // console.log('$stateChangeSuccess', $rootScope.isAdminPage);
-    });
+      if (toState.name !== '') {
+        $rootScope.isAdminPage = notAdminPages.indexOf(toState.name) === -1;
+      }
 
-    if ($rootScope.isAdminPage) {
-      console.log('isAdminPage loadAdmin() ', $rootScope.isAdminPage);
-      loadAdmin()
-    } else {
-      console.log('isAdminPage', $rootScope.isAdminPage);
-      $rootScope.$pageFinishedLoading = true;
-    }
+      if (typeof($rootScope.isAdminPage) === "boolean") {
+        $rootScope.isAdminPage ? loadAdmin() : $rootScope.$pageFinishedLoading = true;
+      }
+    });
 
     function loadAdmin() {
       var whatToWait = [

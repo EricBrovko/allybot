@@ -16,7 +16,7 @@
       timeOut: 5000,
       autoDismiss: false,
       containerId: 'toast-container',
-      maxOpened: 0,
+      maxOpened: 5,
       newestOnTop: true,
       positionClass: 'toast-top-right',
       preventDuplicates: false,
